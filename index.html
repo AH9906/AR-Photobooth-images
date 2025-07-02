@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Photo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    img {
+      max-width: 30%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 24px 48px;
+      font-size: 28px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Here’s your image!</h1>
+
+  <img id="photo" src="" alt="Your image">
+  <br>
+  <a id="downloadBtn" class="button" href="" download>Download Image</a>
+
+  <script>
+    // Direct image link from Firebase
+    const imgUrl = "https://storage.googleapis.com/yourwasta-fac11.appspot.com/Touch%20Designer%20Activations/AR%20Photobooth/Images/img_00018.jpg?Expires=1751539812&GoogleAccessId=firebase-adminsdk-ggdeh%40yourwasta-fac11.iam.gserviceaccount.com&Signature=FpWjzbR1vvTjRK5jfqbjqxKVNs0hsz2mqyd%2BDX5toBGsOdb2NxrXGuDVixuZZLYcP6AlnPqFObimYRV7FxuC7hFQUDzT8g3H95XvvoDTI4Jr8ASXMAjVm1U9sjff9G3SPSwmrq0o8d0VjQEQpGIf0NPnVge5onD21H%2BvyVWemCuXgqfwN5W21fx2NHDZ7QArSUA8C3DV1xC7phKKw6OxU%2BZH4uvNvji5a3GW6hlyr%2BRThfOb33Zzlg65%2BUcF4GFEIvxNhqyWh4t1Reld5GMDM1bCSqSQjG8fSPhzbQgIub4a6ZqK0MWgqj1nG2wFKYzcn3H0t4vxiyXnImN%2Bj42m5Q%3D%3D";
+
+    document.getElementById("photo").src = imgUrl;
+    document.getElementById("downloadBtn").href = imgUrl;
+  </script>
+
+</body>
+</html>
